@@ -36,6 +36,10 @@ class UserProvider with ChangeNotifier{
           name: user.name,
           email: user.email,
           avatarUrl: user.avatarUrl,
+          cep: user.cep,
+          rua: user.rua,
+          cidade: user.cidade,
+          estado: user.estado
           ));
     } else {
         final id = const Uuid().v4();
@@ -43,7 +47,11 @@ class UserProvider with ChangeNotifier{
           id: id,
           name: user.name,
           email: user.email,
-          avatarUrl: user.avatarUrl
+          avatarUrl: user.avatarUrl,
+          cep: user.cep,
+          rua: user.rua,
+          cidade: user.cidade,
+          estado: user.estado
           )
         );
     }
