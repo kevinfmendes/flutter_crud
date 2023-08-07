@@ -15,19 +15,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider (
+    return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-        create: (context) => UserProvider(),
+          create: (context) => UserProvider(),
         )
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         ),
         routes: {
-          AppRoutes.HOME: (_) =>  const UserList(),
+          AppRoutes.HOME: (_) => const UserList(),
           AppRoutes.USER_FORM: (_) => UserForm(),
         },
       ),
