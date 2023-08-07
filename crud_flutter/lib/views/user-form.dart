@@ -31,8 +31,8 @@ class UserForm extends StatelessWidget {
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'Nome *'),
                   validator: (value){
-                    if (value == null || value.isEmpty){
-                      return 'Nome inválido';   
+                    if(value!.isEmpty) {
+                      return 'Este campo é obrigatório';
                     }
                     return null;
                   },
@@ -51,7 +51,7 @@ class UserForm extends StatelessWidget {
                   onPressed: () {
                     final isValid = _form.currentState?.validate();
                     
-                    if(isValid != null){
+                    if(isValid == true){
                       _form.currentState?.save();
                       Navigator.of(context).pop();
                     }
