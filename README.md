@@ -9,6 +9,7 @@ O aplicativo demonstra o uso de várias tecnologias e conceitos do ecossistema F
 - Gerenciamento de estado utilizando Provider
 - Cadastro de novo funcionário com validação de nome e email
 - Consumo da API ViaCep para preenchimento automático de endereço
+- Carregamento dinâmico de imagens da web com Image.network
 - Exclusão de funcionário por ID
 - Navegação entre telas utilizando roteamento
   
